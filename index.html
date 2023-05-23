@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&family=Dongle:wght@300;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6d95b9a263.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <title>Nelson Baltazar's Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Nelson's Portfolio</h1>
+        <nav>
+            <ul>
+                <a href="#aboutme"><li>About Me</li></a>
+                <a href="#projects"><li>Projects</li></a>
+                <a href="#skills"><li>Skills</li></a>
+                <a href="./contact.html"><li>Contact Me</li></a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="aboutme">
+            <div class="aboutme-container">
+                <h3>About Me</h3>
+                <div class="aboutme-flex">
+                    <div class="aboutme-text-container">
+                        <p>
+                            Hello, I'm Nelson Baltazar and welcome to my portfolio page. Here you will find a collection
+                            of my favorite projects that I've completed over the course of my coding journey. I started
+                            this journey on Codecademy in May 2021 following the Front-End Engineer path. Most of my
+                            projects are front-end focused so there will not be any back-end featured integrated in them. 
+                            Clicking on a project name will give you a brief description of what my goals and intentions
+                            were on the project and the screenshot of the site will send you to the site to explore it in
+                            depth. If you enjoy the projects I created or collaborated on, please contact me if you are 
+                            interested in collaborating, inquiring about a custom site for you/your business, or would like
+                            to include me on your team, feel free to <a class="aboutme-link" href="./contact.html">contact me</a> via email. 
+                            Thank you for visiting!
+                        </p>
+                    </div>
+                    <div class="aboutme-img-container">
+                        <img class="responsive" src="./resources/images/IMG_7485.jpeg" alt="Photo of Nelson">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h3>Projects</h3>
+
+            <div class="container">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 3</div>
+                    <a href="../climbing-club/index.html" target="_blank"><img src="./resources/images/climbing-club-screenshot.png" style="width:90%"></a>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 3</div>
+                    <a href="../tea-cozy-project/index.html" target="_blank"><img src="./resources/images/tea-cozy-screenshot.png" style="width:90%"></a>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 3</div>
+                    <a href="../method-madness-academy/index.html" target="_blank"><img src="./resources/images/method-madness-screenshot.png" style="width:90%"></a>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="./resources/images/climbing-club-screenshot.png" style="width:90%" onclick="currentSlide(1)" alt="Climbing Club Page">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="./resources/images/tea-cozy-screenshot.png" style="width:90%" onclick="currentSlide(2)" alt="Tea Cozy Store">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="./resources/images/method-madness-screenshot.png" style="width:90%" onclick="currentSlide(3)" alt="Method Madness Academy Page">
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("demo");
+                  let captionText = document.getElementById("caption");
+                  if (n > slides.length) {slideIndex = 1}
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";
+                  dots[slideIndex-1].className += " active";
+                  captionText.innerHTML = dots[slideIndex-1].alt;
+                }
+                </script>
+        </section>
+
+        <section id="skills">
+            <div class="skills-container">
+                <h3>Skills</h3>
+                <div class="skills-flex">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <i class="fa-brands fa-js"></i>
+                    <i class="fa-brands fa-react"></i>
+                    <i class="fa-brands fa-git"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-chrome"></i>
+                    <i class="fa-solid fa-terminal"></i>
+                    <i class="fa-brands fa-node"></i>
+                    <i class="fa-brands fa-npm"></i>
+                    <i class="devicon-vscode-plain"></i>
+                </div>
+            </div>
+          </section>
+    </main>
+    <footer>
+        <h6>"A jack of all trades is a master of none, but often times better than a master of one."<br> -William Shakespeare</h6>
+    </footer>
+</body>
+</html>

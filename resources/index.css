@@ -1,0 +1,372 @@
+/* UNIVERSAL RULES */
+html {
+    width: 100%;
+    display: block;
+    background-color: black;
+}
+
+body {
+    margin: 0;
+    font-family: 'Dongle', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #D7FCD4;
+    text-align: center;
+    background-image: url('./images/portfolio-background.avif');
+    background-size: cover;
+}
+
+/* TITLE RULES */
+header {
+    width: 100%;
+    height: fit-content;
+}
+
+header h1 {
+    font-family: 'Charmonman', cursive;
+    font-weight: 700;
+    font-size: 48px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+/* NAVIGATION RULES */
+nav {
+    background-image: radial-gradient(rgba(133, 152, 132, 1), rgba(133, 152, 132, 0));
+}
+
+nav ul {
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 85%;
+    margin-left: 0;
+}
+
+nav li {
+    font-size: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 5px;
+    color: #D7FCD4;
+    transition: all .2s ease-in-out;
+}
+
+nav a:hover {
+    transform: scale(1.5);
+    font-weight: 700;
+}
+
+/*MAIN CONTENT RULES */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ABOUT ME SECTION */
+#aboutme {
+    width: 95%;
+    height: fit-content;
+}
+
+.aboutme-container {
+    width: 100%;
+    height: inherit;
+    padding: 2px 5px;
+}
+
+.aboutme-container h3 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 20px 0;
+    background:
+    linear-gradient(to right, #D7FCD4 4px, transparent 4px) 0 0,
+    linear-gradient(to right, #D7FCD4 4px, transparent 4px) 0 100%,
+    linear-gradient(to left, #D7FCD4 4px, transparent 4px) 100% 0,
+    linear-gradient(to left, #D7FCD4 4px, transparent 4px) 100% 100%,
+    linear-gradient(to bottom, #D7FCD4 4px, transparent 4px) 0 0,
+    linear-gradient(to bottom, #D7FCD4 4px, transparent 4px) 100% 0,
+    linear-gradient(to top, #D7FCD4 4px, transparent 4px) 0 100%,
+    linear-gradient(to top, #D7FCD4 4px, transparent 4px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.aboutme-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutme-text-container {
+    width: 50%;
+    height: inherit;
+    text-align: left;
+    padding: 5px;
+    background-color: #D7FCD4;
+    margin: 2rem auto;
+    border: 8px solid #859884;
+    position: relative;
+    border-image: 
+        url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 0H8v4H4v4H0v8h4v4h4v4h8v-4h4v-4h4V8h-4V4h-4V0zm0 4v4h4v8h-4v4H8v-4H4V8h4V4h8z' fill='%230038FF'/%3E%3C/svg%3E")
+        8 stretch;
+}
+
+.aboutme-text-container:before {
+    content: "";
+    position: absolute;
+    right: -28px;
+    top: calc(50% - 14px);
+    width: 24px;
+    height: 28px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 0H0v8h12v4h4v4h-4v4H0v8h4v-4h8v-4h4v-4h8v-4h-8V8h-4V4H4V0z' fill='%230038FF'/%3E%3Cpath fill='%23161616' d='M0 8h4v12H0z'/%3E%3C/svg%3E");
+}
+
+.aboutme-text-container p {
+    font-size: 24px;
+    color: #333333;
+}
+
+.aboutme-img-container {
+    width: 45%;
+    height: inherit;
+}
+
+.responsive {
+    width: 65%;
+    height: inherit;
+}
+
+/* PROJECTS SECTION */
+#projects {
+    width: 95%;
+    height: fit-content;
+}
+
+#projects h3 {
+    font-size: 36px;
+    font-weight: 700;
+    background:
+    linear-gradient(to right, #ACD9EC 4px, transparent 4px) 0 0,
+    linear-gradient(to right, #ACD9EC 4px, transparent 4px) 0 100%,
+    linear-gradient(to left, #ACD9EC 4px, transparent 4px) 100% 0,
+    linear-gradient(to left, #ACD9EC 4px, transparent 4px) 100% 100%,
+    linear-gradient(to bottom, #ACD9EC 4px, transparent 4px) 0 0,
+    linear-gradient(to bottom, #ACD9EC 4px, transparent 4px) 100% 0,
+    linear-gradient(to top, #ACD9EC 4px, transparent 4px) 0 100%,
+    linear-gradient(to top, #ACD9EC 4px, transparent 4px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    color: #ACD9EC;
+}
+
+.container {
+    position: relative;
+}
+  
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #ACD9EC;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Position the "previous button" to the left */
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(172, 217, 236, 0.8);
+    color: #500232;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #ACD9EC;
+    padding: 2px 16px;
+    color: #500232;
+    font-size: 24px;
+    font-weight: 300;
+    border-radius: 5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+/* SKILLS SECTION RULES */
+#skills {
+    width: 95%;
+    height: fit-content;
+    margin-bottom: 30px;
+}
+
+.skills-container h3 {
+    font-size: 36px;
+    font-weight: 700;
+    background:
+    linear-gradient(to right, #D7FCD4 4px, transparent 4px) 0 0,
+    linear-gradient(to right, #D7FCD4 4px, transparent 4px) 0 100%,
+    linear-gradient(to left, #D7FCD4 4px, transparent 4px) 100% 0,
+    linear-gradient(to left, #D7FCD4 4px, transparent 4px) 100% 100%,
+    linear-gradient(to bottom, #D7FCD4 4px, transparent 4px) 0 0,
+    linear-gradient(to bottom, #D7FCD4 4px, transparent 4px) 100% 0,
+    linear-gradient(to top, #D7FCD4 4px, transparent 4px) 0 100%,
+    linear-gradient(to top, #D7FCD4 4px, transparent 4px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.skills-flex {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skills-flex i {
+    font-size: 36px;
+}
+
+footer h6 {
+    font-size: 1.25vw;
+    font-family: 'Charmonman', cursive;
+}
+
+/* CONTACT PAGE SPECIFIC RULES */
+#contactme {
+    width: 95%;
+    height: fit-content;
+    margin-top: 10px;
+}
+
+.contactme-container h3{
+    font-size: 36px;
+    font-weight: 700;
+    background:
+    linear-gradient(to right, #D7FCD4 4px, transparent 4px) 0 0,
+    linear-gradient(to right, #D7FCD4 4px, transparent 4px) 0 100%,
+    linear-gradient(to left, #D7FCD4 4px, transparent 4px) 100% 0,
+    linear-gradient(to left, #D7FCD4 4px, transparent 4px) 100% 100%,
+    linear-gradient(to bottom, #D7FCD4 4px, transparent 4px) 0 0,
+    linear-gradient(to bottom, #D7FCD4 4px, transparent 4px) 100% 0,
+    linear-gradient(to top, #D7FCD4 4px, transparent 4px) 0 100%,
+    linear-gradient(to top, #D7FCD4 4px, transparent 4px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.contactme-container p {
+    font-size: 24px;
+}
+
+.contactme-flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contactme-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contactme-buttons a {
+    color: #D7FCD4;
+    transition: all .2s ease-in-out
+}
+
+.contactme-buttons a:hover {
+    transform: scale(2);
+    font-weight: 700;
+}
+
+.contactme-buttons i {
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.form-container h4 {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.contactme-form label {
+    font-size: 24px;
+}
+
+.contactme-form #button {
+    font-family: 'Dongle', sans-serif;
+    background-color: #D7FCD4;
+    color: #333333;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.contactme-form #button:hover {
+    cursor: pointer;
+}

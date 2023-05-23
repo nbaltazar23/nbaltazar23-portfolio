@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&family=Dongle:wght@300;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6d95b9a263.js" crossorigin="anonymous"></script>
+    <title>Contact Page</title>
+</head>
+<body>
+    <header>
+        <h1>Nelson Baltazar</h1>
+        <nav>
+            <ul>
+                <a href="./index.html"><li>Home</li></a>
+                <a href="#contactme"><li>Contact Me</li></a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="contactme">
+            <div class="contactme-container">
+                <h3>Contact</h3>
+                <p>
+                    If you'd like to include me on a project you're working on. Please contact via the methods provided
+                    below or fill out the form with your contact information and a description on what your project is:
+                </p>
+                <div class="contactme-flex">
+                    <div class="contactme-buttons">
+                        <a href="https://www.linkedin.com/in/nelson-baltazar-217230a5?trk=people-guest_people_search-card" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="mailto: nelsonbalta23@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://github.com/nbaltazar23" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <div class="form-container">
+                        <h4>Tell me a bit about yourself and your project.</h4>
+                        <form class="contactme-form">
+                            <label for="fname">First name:</label><br>
+                            <input type="text" id="fname" name="fname" required><br>
+                            <label for="lname">Last name:</label><br>
+                            <input type="text" id="lname" name="lname" required><br>
+                            <label for="email">Enter your email:</label><br>
+                            <input type="email" id="email" name="email" required><br>
+                            <label for="description">Describe your project:</label><br>
+                            <textarea name="description" id="description" maxlength="500" rows="10" cols="30" required></textarea><br>
+                            <input id="button" type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
