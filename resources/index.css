@@ -25,9 +25,9 @@ header {
 header h1 {
     font-family: 'Charmonman', cursive;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 3.9vw;
     margin: 0;
-    padding-top: 10px;
+    padding-top: 2vh;
 }
 
 /* NAVIGATION RULES */
@@ -38,10 +38,12 @@ nav {
 nav ul {
     display: inline-flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     align-items: center;
     list-style: none;
     width: 85%;
     margin-left: 0;
+    padding-left: 0%;
 }
 
 nav li {
@@ -50,7 +52,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    padding: 5px;
+    padding: .75%;
     color: #D7FCD4;
     transition: all .2s ease-in-out;
 }
@@ -80,9 +82,9 @@ main {
 }
 
 .aboutme-container h3 {
-    font-size: 36px;
+    font-size: 3vw;
     font-weight: 700;
-    margin: 20px 0;
+    margin: 3vh 0;
     background:
     linear-gradient(to right, #D7FCD4 4px, transparent 4px) 0 0,
     linear-gradient(to right, #D7FCD4 4px, transparent 4px) 0 100%,
@@ -127,7 +129,7 @@ main {
 }
 
 .aboutme-text-container p {
-    font-size: 24px;
+    font-size: 2vw;
     color: #333333;
 }
 
@@ -148,7 +150,7 @@ main {
 }
 
 #projects h3 {
-    font-size: 36px;
+    font-size: 3vw;
     font-weight: 700;
     background:
     linear-gradient(to right, #ACD9EC 4px, transparent 4px) 0 0,
@@ -229,7 +231,7 @@ main {
     background-color: #ACD9EC;
     padding: 2px 16px;
     color: #500232;
-    font-size: 24px;
+    font-size: 2vw;
     font-weight: 300;
     border-radius: 5px;
 }
@@ -264,7 +266,7 @@ main {
 }
 
 .skills-container h3 {
-    font-size: 36px;
+    font-size: 3vw;
     font-weight: 700;
     background:
     linear-gradient(to right, #D7FCD4 4px, transparent 4px) 0 0,
@@ -287,7 +289,7 @@ main {
 }
 
 .skills-flex i {
-    font-size: 36px;
+    font-size: 3vw;
 }
 
 footer h6 {
@@ -303,7 +305,7 @@ footer h6 {
 }
 
 .contactme-container h3{
-    font-size: 36px;
+    font-size: 3vw;
     font-weight: 700;
     background:
     linear-gradient(to right, #D7FCD4 4px, transparent 4px) 0 0,
@@ -319,7 +321,7 @@ footer h6 {
 }
 
 .contactme-container p {
-    font-size: 24px;
+    font-size: 1em;
 }
 
 .contactme-flex {
@@ -346,27 +348,28 @@ footer h6 {
 }
 
 .contactme-buttons i {
-    font-size: 36px;
+    font-size: 3vw;
     margin: 20px 0;
 }
 
-.form-container h4 {
-    font-size: 30px;
+#form-container h4 {
+    font-size: 2.3vw;
     margin: 20px 0;
 }
 
-.contactme-form label {
-    font-size: 24px;
+#contactme-form label {
+    font-size: 2vw;
 }
 
-.contactme-form #button {
+#contactme-form #button {
     font-family: 'Dongle', sans-serif;
     background-color: #D7FCD4;
     color: #333333;
-    font-size: 24px;
+    font-size: 2vw;
     font-weight: 700;
 }
 
-.contactme-form #button:hover {
+#contactme-form #button:hover {
     cursor: pointer;
 }
+
