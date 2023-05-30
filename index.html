@@ -27,25 +27,28 @@
             <div class="aboutme-container">
                 <h3>About Me</h3>
                 <div class="aboutme-flex">
-                    <div class="aboutme-text-container">
+                    <div id="aboutme-text-container">
                         <p>
                             Hello, I'm Nelson Baltazar and welcome to my portfolio page. Here you will find a collection
                             of my favorite projects that I've completed over the course of my coding journey. I started
                             this journey on Codecademy in May 2021 following the Front-End Engineer path. Most of my
-                            projects are front-end focused so there will not be any back-end featured integrated in them. 
+                            projects are front-end focused so there will not be any back-end features integrated in them. 
                             Clicking on a project name will give you a brief description of what my goals and intentions
                             were on the project and the screenshot of the site will send you to the site to explore it in
                             depth. If you enjoy the projects I created or collaborated on, please contact me if you are 
                             interested in collaborating, inquiring about a custom site for you/your business, or would like
-                            to include me on your team, feel free to <a class="aboutme-link" href="./contact.html">contact me</a> via email. 
-                            Thank you for visiting!
+                            to include me on your team, feel free to <a class="aboutme-link" href="./contact.html">contact me</a>
+                            via email or by filling out the form. Thank you for visiting!
                         </p>
+                        <button type="button" id="aboutme-button" onclick="displayAboutMePhoto()">View Photo</button>
                     </div>
-                    <div class="aboutme-img-container">
-                        <img class="responsive" src="./resources/images/IMG_7485.jpeg" alt="Photo of Nelson">
+                    <div id="aboutme-img-container">
+                        <img class="responsive aboutme-img" src="./resources/images/portfolio-portrait.jpeg">
+                        <button type="button" id="aboutme-button" onclick="displayAboutMeText()">See more about me</button>
                     </div>
                 </div>
             </div>
+            <script src="./responsive-display.js"></script>
         </section>
 
         <section id="projects">

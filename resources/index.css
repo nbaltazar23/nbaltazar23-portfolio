@@ -25,7 +25,7 @@ header {
 header h1 {
     font-family: 'Charmonman', cursive;
     font-weight: 700;
-    font-size: 3.9vw;
+    font-size: 36px;
     margin: 0;
     padding-top: 2vh;
 }
@@ -82,7 +82,7 @@ main {
 }
 
 .aboutme-container h3 {
-    font-size: 3vw;
+    font-size: 36px;
     font-weight: 700;
     margin: 3vh 0;
     background:
@@ -104,7 +104,7 @@ main {
     align-items: center;
 }
 
-.aboutme-text-container {
+#aboutme-text-container {
     width: 50%;
     height: inherit;
     text-align: left;
@@ -118,7 +118,7 @@ main {
         8 stretch;
 }
 
-.aboutme-text-container:before {
+#aboutme-text-container:before {
     content: "";
     position: absolute;
     right: -28px;
@@ -128,14 +128,18 @@ main {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 0H0v8h12v4h4v4h-4v4H0v8h4v-4h8v-4h4v-4h8v-4h-8V8h-4V4H4V0z' fill='%230038FF'/%3E%3Cpath fill='%23161616' d='M0 8h4v12H0z'/%3E%3C/svg%3E");
 }
 
-.aboutme-text-container p {
-    font-size: 2vw;
+#aboutme-text-container p {
+    font-size: 24px;
     color: #333333;
 }
 
-.aboutme-img-container {
+#aboutme-img-container {
     width: 45%;
-    height: inherit;
+    height: fit-content;
+}
+
+#aboutme-button {
+    display: none;
 }
 
 .responsive {
@@ -150,7 +154,7 @@ main {
 }
 
 #projects h3 {
-    font-size: 3vw;
+    font-size: 36px;
     font-weight: 700;
     background:
     linear-gradient(to right, #ACD9EC 4px, transparent 4px) 0 0,
@@ -231,7 +235,7 @@ main {
     background-color: #ACD9EC;
     padding: 2px 16px;
     color: #500232;
-    font-size: 2vw;
+    font-size: 20px;
     font-weight: 300;
     border-radius: 5px;
 }
@@ -266,7 +270,7 @@ main {
 }
 
 .skills-container h3 {
-    font-size: 3vw;
+    font-size: 36px;
     font-weight: 700;
     background:
     linear-gradient(to right, #D7FCD4 4px, transparent 4px) 0 0,
@@ -283,17 +287,17 @@ main {
 
 .skills-flex {
     display: flex;
+    justify-content: space-evenly;
     width: 100%;
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .skills-flex i {
-    font-size: 3vw;
+    font-size: 36px;
 }
 
 footer h6 {
-    font-size: 1.25vw;
+    font-size: 14px;
     font-family: 'Charmonman', cursive;
 }
 
@@ -305,7 +309,7 @@ footer h6 {
 }
 
 .contactme-container h3{
-    font-size: 3vw;
+    font-size: 36px;
     font-weight: 700;
     background:
     linear-gradient(to right, #D7FCD4 4px, transparent 4px) 0 0,
@@ -321,7 +325,7 @@ footer h6 {
 }
 
 .contactme-container p {
-    font-size: 1em;
+    font-size: 30px;
 }
 
 .contactme-flex {
@@ -348,24 +352,24 @@ footer h6 {
 }
 
 .contactme-buttons i {
-    font-size: 3vw;
+    font-size: 36px;
     margin: 20px 0;
 }
 
-#form-container h4 {
-    font-size: 2.3vw;
+.form-container h4 {
+    font-size: 28px;
     margin: 20px 0;
 }
 
 #contactme-form label {
-    font-size: 2vw;
+    font-size: 24px;
 }
 
 #contactme-form #button {
     font-family: 'Dongle', sans-serif;
     background-color: #D7FCD4;
     color: #333333;
-    font-size: 2vw;
+    font-size: 36px;
     font-weight: 700;
 }
 
@@ -373,3 +377,114 @@ footer h6 {
     cursor: pointer;
 }
 
+@media only screen and (max-width: 600px) {
+    header h1 {
+        font-size: 26px;
+        padding: 0 5px;
+    }
+
+    .aboutme-container h3 {
+        font-size: 24px;
+        padding: 7px 0;
+    }
+    
+    .aboutme-img {
+        display: none;
+    }
+
+    #aboutme-text-container {
+        display: none;
+        width: 80%;
+    }
+
+    #aboutme-text-container p {
+        font-size: 14px;
+    }
+
+    #aboutme-button {
+        font-family: 'Dongle', sans-serif;
+        background-color: #D7FCD4;
+        color: #333333;
+        font-size: 3.5vw;
+        font-weight: 700;
+        display: block;
+        border-radius: 5px;
+    }
+    
+    #aboutme-img-container {
+        display: grid;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+        grid-template-columns: max-content auto;
+        grid-template-rows: auto max-content;
+        background: rgba(51, 51, 51, 0) url('./images/portfolio-portrait.jpeg') center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: white;
+        width: 400px;
+        height: 300px;
+        padding: 2rem;
+            &:before,
+            &:after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                border: 1px solid white;
+	        }
+            &:before {
+                grid-row: 1 / 2;
+                border-right: none;
+                border-bottom: none;
+            }	
+            &:after {
+                grid-row: 1 / span 2;
+                border-left: none;
+            }
+        .button {
+            margin: 1rem 1rem -.5rem 0;
+            font-family: 'Pragati Narrow', sans-serif;
+            font-size: 2rem;
+            max-width: 100%;
+        }
+    }
+
+    #projects h3 {
+        font-size: 24px;
+        padding: 7px 0;
+    }
+
+    .skills-container h3 {
+        font-size: 24px;
+        padding: 7px 0;
+    }
+
+    .caption-container {
+        font-size: 14px;
+    }
+
+     .skills-flex i {
+        font-size: 28px;
+    }
+
+    .contactme-container h3 {
+        font-size: 24px;
+        padding: 7px 0;
+    }
+
+     .contactme-container p {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .contactme-buttons {
+        display: none;
+    }
+
+    .form-container h4 {
+        margin-top: 10px;
+    }
+
+    #contactme-form #button {
+        font-size: 20px;
+    }
+}
